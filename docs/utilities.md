@@ -222,7 +222,7 @@ records|Array< Object > | Object | undefined|The records.
   ```js
   const { getItems, replaceItems } = require('feathers-hooks-common');
 
-  const insertCode = code => context {
+  const insertCode = code => context => {
     const items = getItems(context);
     if (Array.isArray(items)) {
       items.forEach(item => { item.code = code; });
